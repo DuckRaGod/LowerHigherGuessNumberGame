@@ -1,7 +1,14 @@
 import random
 import os
 
+#-------------------------Varibales----------------------
 
+rightNumber = 0
+correctGusses = 0
+wrongGusses = 0
+max = 1000
+
+#------------------------Functions---------------------
 def Intro():
     os.system('cls')
     print("----------------------------------------")
@@ -19,13 +26,6 @@ def Intro():
         print("Nice!")
     Level = 0
     os.system('cls')
-
-Intro()
-
-rightNumber = 0
-correctGusses = 0
-wrongGusses = 0
-
 
 def Game():
     global correctGusses
@@ -60,10 +60,10 @@ def Game():
             print("Correct!!!")
 
 
-wrongGusses=0
-correctGusses=0
+#----------------------------Game--------------------------
+Intro()
 while(True):
-    rightNumber = random.randint(-999,999)
+    rightNumber = random.randint(0,max)
     print("------------------------")
     print("Correct gusses:",correctGusses,"\nWrong gusses:",wrongGusses,)
     Game()
